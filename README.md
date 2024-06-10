@@ -15,5 +15,5 @@ A Flutter application that displays a list of Pokémon fetched from the PokéAPI
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/deveshkhatuwal/pokemon_list.git
+   git clone https://github.com/deveshkhatuwal/pokemon_List.git
   
