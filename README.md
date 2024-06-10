@@ -1,16 +1,19 @@
-# pokemon
+# Pokémon List Flutter App
 
-A new Flutter project.
+A Flutter application that displays a list of Pokémon fetched from the PokéAPI. The app uses the `provider` package for state management and includes a details screen for each Pokémon.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Fetches a list of Pokémon from the PokéAPI.
+- Displays Pokémon names and images in a list view.
+- Navigates to a details screen showing more information (name, image, height, weight, and types) when a Pokémon is tapped.
+- Error handling for network issues and other potential errors.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/deveshkhatuwal/pokemon_list.git
+  
