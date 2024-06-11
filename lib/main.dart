@@ -3,8 +3,6 @@ import 'package:pokemon/providers/pokemon_provider.dart';
 import 'package:pokemon/screens/pokemon_list_screen.dart';
 import 'package:provider/provider.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }

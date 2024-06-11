@@ -3,17 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../Models/pokemon.dart';
 
-
 class PokemonProvider with ChangeNotifier {
   final List<Pokemon> _pokemonList = [];
   String _errorMessage = '';
   bool _isFetching = false;
+
   List<Pokemon> get pokemonList => _pokemonList;
+
   String get errorMessage => _errorMessage;
+
   bool get isFetching => _isFetching;
-
-
-
 
   Future<void> fetchPokemon() async {
     final url = Uri.parse('https://pokeapi.co/api/v2/pokemon?limit=15');
@@ -22,8 +21,6 @@ class PokemonProvider with ChangeNotifier {
       _pokemonList.clear();
       _isFetching = true;
       _errorMessage = '';
-
-
 
       final response = await http.get(url);
       if (response.statusCode != 200) {
@@ -51,7 +48,4 @@ class PokemonProvider with ChangeNotifier {
       notifyListeners();
     }
   }
-
-
-
 }

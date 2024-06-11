@@ -10,7 +10,6 @@ class PokemonListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -37,9 +36,11 @@ class PokemonListScreen extends StatelessWidget {
                     final pokemon = pokemonProvider.pokemonList[index];
                     return itemCard(
                       imageUrl: pokemon.imageUrl,
-                      subtitle: pokemon.types.join(" - ", ),
-                       name: pokemon.name,
-                      onitemtap:  PokemonDetailScreen(pokemon: pokemon),
+                      subtitle: pokemon.types.join(
+                        " - ",
+                      ),
+                      name: pokemon.name,
+                      onitemtap: PokemonDetailScreen(pokemon: pokemon),
                     );
                   },
                 );
