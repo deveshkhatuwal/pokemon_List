@@ -8,34 +8,33 @@ class PokemonProvider with ChangeNotifier {
   final List<Pokemon> _pokemonList = [];
   String _errorMessage = '';
   bool _isFetching = false;
-
-
   List<Pokemon> get pokemonList => _pokemonList;
   String get errorMessage => _errorMessage;
-
   bool get isFetching => _isFetching;
 
+
+
+
   Future<void> fetchPokemon() async {
-    final url = Uri.parse('https://pokeapi.co/api/v2/pokemon?limit=10');
-    _pokemonList.clear();
+    final url = Uri.parse('https://pokeapi.co/api/v2/pokemon?limit=15');
 
     try {
+      _pokemonList.clear();
       _isFetching = true;
       _errorMessage = '';
-      _pokemonList.clear();
-      // notifyListeners();
+
+
 
       final response = await http.get(url);
       if (response.statusCode != 200) {
-        _pokemonList.clear();
+        // _pokemonList.clear();
 
         throw Exception('Failed to load data');
       }
 
       final extractedData = json.decode(response.body) as Map<String, dynamic>;
       final List<dynamic> results = extractedData['results'];
-      _pokemonList.clear();
-      // _pokemonList = [];
+      // _pokemonList.clear();
       for (var result in results) {
         final detailUrl = result['url'];
         final detailResponse = await http.get(Uri.parse(detailUrl));
