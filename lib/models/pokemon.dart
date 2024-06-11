@@ -1,4 +1,3 @@
-// lib/models/pokemon.dart
 class Pokemon {
   final String name;
   final String imageUrl;
